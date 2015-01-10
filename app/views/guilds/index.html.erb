@@ -1,0 +1,23 @@
+<h1>Listing guilds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @guilds.each do |guild| %>
+      <tr>
+        <td><%= link_to 'Show', guild %></td>
+        <td><%= link_to 'Edit', edit_guild_path(guild) %></td>
+        <td><%= link_to 'Destroy', guild, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Guild', new_guild_path %>
